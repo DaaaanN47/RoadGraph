@@ -61,9 +61,7 @@ public class OsmParser {
         return builder.parse("E:\\Refactor project\\RoadGraph\\src\\main\\NAB-CH.osm");
     }
 
-
-
-    public void CheckWays(NodeList nodeList, String fillSpeedMap ) throws IOException {
+    public void CheckWays(NodeList nodeList) throws IOException {
 
         int nodeListLength = nodeList.getLength();
         for (int i = 0; i < nodeListLength; i++) {
@@ -74,10 +72,6 @@ public class OsmParser {
             }
             CheckWayParams(nodeList.item(i));
         }
-//        if(fillSpeedMap.equals("Время")){
-//            fillRoadSpeedMap();
-//            setRoadsMaxSpeed();
-//        }
     }
     private void CheckWayParams(Node way){
         NamedNodeMap attributes = way.getAttributes();
@@ -123,17 +117,6 @@ public class OsmParser {
             }
         }
     }
-//    public void addNewNode(long id,){
-//        if(!graph.getAllNodesIds().contains(id)){
-//            graph.getAllNodesIds().add(id);
-//            getLongIntegerIds().put(id,graph.nodeIdsCounter);
-//            getIntegerLongIds().put(graph.nodeIdsCounter,id);
-//            graph.nodeIdsCounter++;
-//        } else {
-//            int intId = longIntegerIds.get(id);
-//            graph.getNodeMap().get(intId).setIsCrossRoad();
-//        }
-//    }
     public void getEdgesAndNodes(NodeList nodeList){
         int nodeListLength = nodeList.getLength();
         for (int i = 0; i < nodeListLength; i++) {

@@ -6,28 +6,6 @@ import java.util.Queue;
 public class DijkstraAlgorithm {
 
     Queue<VisitedVertex> vertexQueue = new PriorityQueue<>();
-    //если булевая переменная равна true то вес это расстояние, если false, то время в пути
-//    public void setInfWeightToVertexes(Graph graph, Vertex start, Boolean weightType){
-//        if(weightType){
-//            graph.getVertexMap().forEach((key, value) -> {
-//                if (value.equals(start)) {
-//                    value.setDistWeightFromStart(0);
-//                } else {
-//                    value.setDistWeightFromStart(Double.MAX_VALUE);
-//                }
-//                value.setEdgeWeightsFromStart(value.getDistWeightFromStart());
-//            });
-//        }else{
-//            graph.getVertexMap().forEach((key, value) -> {
-//                if (value.equals(start)) {
-//                    value.setTimeWeightFromStart(0);
-//                } else {
-//                    value.setTimeWeightFromStart(Double.MAX_VALUE);
-//                }
-//                value.setEdgeWeightsFromStart(value.getTimeWeightFromStart());
-//            });
-//        }
-//    }
     // небольшое нововведение в алгоритм тут мы сейчас работает уже не конкретно с лдистанцией ребра а с ее весом,
     // что может быть и дистацией и временем, но чтобы выводить значение пройденного расстояния  в случае если в качестве веса ребра было выбрано время,
     // отдельно ведется подсчет пройденного расстояния в не зависимости было ли выбрано вреям или дистанция в качестве веса ребра

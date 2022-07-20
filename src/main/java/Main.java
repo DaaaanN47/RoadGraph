@@ -21,7 +21,7 @@ public class Main {
         //сначала собираем читаем нужные дороги и собираем точки содаем объекты и полностью их заполняем
         Node node = document.getFirstChild();
         NodeList nodeList = node.getChildNodes();
-        osmParser.CheckWays(nodeList, args[4]);
+        osmParser.CheckWays(nodeList);
         osmParser.getEdgesAndNodes(nodeList);
         System.out.println(graph.CountCrossRoad());
         CoordinatesTree root = new CoordinatesTree(nodeList,4);

@@ -38,8 +38,6 @@ public class GraphNode {
         setLat(lat);
         setLon(lon);
     }
-
-
     public String getWKTCoordinates() {
         return lon + " " + lat;
     }

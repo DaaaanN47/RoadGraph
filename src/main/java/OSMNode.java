@@ -15,10 +15,6 @@ public class OSMNode {
         isCrossRoad=true;
     }
 
-    public void setCrossRoad(boolean crossRoad) {
-        isCrossRoad = crossRoad;
-    }
-
     public OSMNode(int id, double lat, double lon) {
         setId(id);
         setLat(lat);
